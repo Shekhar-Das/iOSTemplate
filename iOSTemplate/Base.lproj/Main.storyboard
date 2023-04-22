@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
-        <!--LoginVC-->
+        <!--On Boarding View Controller-->
         <scene sceneID="s8k-1n-Ouc">
             <objects>
-                <viewController storyboardIdentifier="LoginVC" id="QVy-DH-XXH" customClass="LoginVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnBoardingViewController" id="QVy-DH-XXH" customClass="OnBoardingViewController" customModule="iOSTemplate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fQs-uP-qhR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
