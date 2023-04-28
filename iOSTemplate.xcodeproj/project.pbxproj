@@ -27,7 +27,6 @@
 		95BC051A29F0E70E00D26C44 /* iOSTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC051929F0E70E00D26C44 /* iOSTemplateUITests.swift */; };
 		95BC051C29F0E70E00D26C44 /* iOSTemplateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC051B29F0E70E00D26C44 /* iOSTemplateUITestsLaunchTests.swift */; };
 		95BC052A29F0F67A00D26C44 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC052929F0F67A00D26C44 /* UIViewExt.swift */; };
-		95CE81D229F3C33000CB70BF /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CE81D129F3C33000CB70BF /* OnBoardingViewController.swift */; };
 		95CE81D529F3C3D900CB70BF /* CustomAutoSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CE81D429F3C3D800CB70BF /* CustomAutoSlider.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +73,6 @@
 		95BC051929F0E70E00D26C44 /* iOSTemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTemplateUITests.swift; sourceTree = "<group>"; };
 		95BC051B29F0E70E00D26C44 /* iOSTemplateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTemplateUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		95BC052929F0F67A00D26C44 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
-		95CE81D129F3C33000CB70BF /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		95CE81D429F3C3D800CB70BF /* CustomAutoSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAutoSlider.swift; sourceTree = "<group>"; };
 		9F13A2863810C653AF61C5EE /* Pods-iOSTemplate-iOSTemplateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTemplate-iOSTemplateUITests.release.xcconfig"; path = "Target Support Files/Pods-iOSTemplate-iOSTemplateUITests/Pods-iOSTemplate-iOSTemplateUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B13915C2E60E9DD99775362F /* Pods_iOSTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,7 +205,6 @@
 		95CE81D029F3C31300CB70BF /* OnBoardingView */ = {
 			isa = PBXGroup;
 			children = (
-				95CE81D129F3C33000CB70BF /* OnBoardingViewController.swift */,
 			);
 			path = OnBoardingView;
 			sourceTree = "<group>";
@@ -496,7 +493,6 @@
 				959C1F7A29F134390053FD4E /* NoInternetViewController.swift in Sources */,
 				95BC04F829F0E70D00D26C44 /* SceneDelegate.swift in Sources */,
 				95BC050029F0E70D00D26C44 /* iOSTemplate.xcdatamodeld in Sources */,
-				95CE81D229F3C33000CB70BF /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
