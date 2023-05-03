@@ -24,8 +24,12 @@
 		9596DA082A01633300CBDEAF /* KANotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9596DA072A01633300CBDEAF /* KANotificationModel.swift */; };
 		9596DA0A2A016E8400CBDEAF /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9596DA092A016E8400CBDEAF /* LoginModel.swift */; };
 		959C1F7729F11F090053FD4E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C1F7629F11F090053FD4E /* NetworkManager.swift */; };
-		959C1F7A29F134390053FD4E /* NoInternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C1F7929F134390053FD4E /* NoInternetViewController.swift */; };
 		959C1F7C29F138420053FD4E /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C1F7B29F138420053FD4E /* Extentions.swift */; };
+		959C43D02A0263980090A933 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C43CF2A0263980090A933 /* LoginVM.swift */; };
+		95B360CD2A018E9000256BD7 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95B360CC2A018E9000256BD7 /* Authentication.storyboard */; };
+		95B360D02A01919100256BD7 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B360CF2A01919100256BD7 /* WelcomeVC.swift */; };
+		95B360D32A0191B400256BD7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B360D22A0191B400256BD7 /* LoginVC.swift */; };
+		95B360D62A0191D000256BD7 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B360D52A0191D000256BD7 /* RegistrationVC.swift */; };
 		95BC04F629F0E70D00D26C44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC04F529F0E70D00D26C44 /* AppDelegate.swift */; };
 		95BC04F829F0E70D00D26C44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC04F729F0E70D00D26C44 /* SceneDelegate.swift */; };
 		95BC04FA29F0E70D00D26C44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC04F929F0E70D00D26C44 /* ViewController.swift */; };
@@ -76,8 +80,13 @@
 		9596DA072A01633300CBDEAF /* KANotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KANotificationModel.swift; sourceTree = "<group>"; };
 		9596DA092A016E8400CBDEAF /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		959C1F7629F11F090053FD4E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		959C1F7929F134390053FD4E /* NoInternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetViewController.swift; sourceTree = "<group>"; };
 		959C1F7B29F138420053FD4E /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		959C43CF2A0263980090A933 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		95B360C62A01789500256BD7 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95B360CC2A018E9000256BD7 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		95B360CF2A01919100256BD7 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		95B360D22A0191B400256BD7 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		95B360D52A0191D000256BD7 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		95BC04F229F0E70D00D26C44 /* iOSTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BC04F529F0E70D00D26C44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95BC04F729F0E70D00D26C44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +141,7 @@
 		959274F029F16C61001FCAA3 /* Storyboarded */ = {
 			isa = PBXGroup;
 			children = (
+				95B360CC2A018E9000256BD7 /* Authentication.storyboard */,
 				959274F129F16C6A001FCAA3 /* Storyboarded.swift */,
 			);
 			path = Storyboarded;
@@ -161,10 +171,51 @@
 		959C1F7829F134060053FD4E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				95CE81D029F3C31300CB70BF /* OnBoardingView */,
-				959C1F7929F134390053FD4E /* NoInternetViewController.swift */,
+				95B360D42A0191B700256BD7 /* Registration */,
+				95B360D12A01919F00256BD7 /* Login */,
+				95B360CE2A01917200256BD7 /* Onboarding */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		959C43CE2A0263840090A933 /* LoginVM */ = {
+			isa = PBXGroup;
+			children = (
+				959C43CF2A0263980090A933 /* LoginVM.swift */,
+			);
+			path = LoginVM;
+			sourceTree = "<group>";
+		};
+		95B360CB2A01882400256BD7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				959C43CE2A0263840090A933 /* LoginVM */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		95B360CE2A01917200256BD7 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				95B360CF2A01919100256BD7 /* WelcomeVC.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		95B360D12A01919F00256BD7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				95B360D22A0191B400256BD7 /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		95B360D42A0191B700256BD7 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				95B360D52A0191D000256BD7 /* RegistrationVC.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 		95BC04E929F0E70D00D26C44 = {
@@ -192,6 +243,7 @@
 		95BC04F429F0E70D00D26C44 /* iOSTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				95B360CB2A01882400256BD7 /* ViewModel */,
 				9596DA042A0162B100CBDEAF /* Model */,
 				95CE81D329F3C3A100CB70BF /* Utils */,
 				959274F029F16C61001FCAA3 /* Storyboarded */,
@@ -236,13 +288,6 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
-		95CE81D029F3C31300CB70BF /* OnBoardingView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = OnBoardingView;
-			sourceTree = "<group>";
-		};
 		95CE81D329F3C3A100CB70BF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +318,7 @@
 		A9EFAB159FF18DCE84B3C0DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95B360C62A01789500256BD7 /* RxSwift.framework */,
 				B13915C2E60E9DD99775362F /* Pods_iOSTemplate.framework */,
 				EBAF8F0CA57397C813487787 /* Pods_iOSTemplate_iOSTemplateUITests.framework */,
 				27341984EC7D75E8FE9288F8 /* Pods_iOSTemplateTests.framework */,
@@ -393,6 +439,7 @@
 			files = (
 				95BC050529F0E70D00D26C44 /* LaunchScreen.storyboard in Resources */,
 				95BC050229F0E70D00D26C44 /* Assets.xcassets in Resources */,
+				95B360CD2A018E9000256BD7 /* Authentication.storyboard in Resources */,
 				95BC04FD29F0E70D00D26C44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,19 +611,22 @@
 				9596DA032A01629500CBDEAF /* StaticHelper.swift in Sources */,
 				95BC04F629F0E70D00D26C44 /* AppDelegate.swift in Sources */,
 				9596D9FD2A0161EA00CBDEAF /* ActivityView.swift in Sources */,
+				959C43D02A0263980090A933 /* LoginVM.swift in Sources */,
+				95B360D02A01919100256BD7 /* WelcomeVC.swift in Sources */,
 				95BC052A29F0F67A00D26C44 /* UIViewExt.swift in Sources */,
 				959C1F7C29F138420053FD4E /* Extentions.swift in Sources */,
 				95CE81D529F3C3D900CB70BF /* CustomAutoSlider.swift in Sources */,
 				9596D9FB2A0161B900CBDEAF /* Enum.swift in Sources */,
 				95928D0129F40B1E0000780F /* CustomCollectionView.swift in Sources */,
 				959274F229F16C6A001FCAA3 /* Storyboarded.swift in Sources */,
-				959C1F7A29F134390053FD4E /* NoInternetViewController.swift in Sources */,
 				9596DA012A01627100CBDEAF /* Reachability.swift in Sources */,
 				95BC04F829F0E70D00D26C44 /* SceneDelegate.swift in Sources */,
 				9596D9F72A01616700CBDEAF /* AppSession.swift in Sources */,
+				95B360D62A0191D000256BD7 /* RegistrationVC.swift in Sources */,
 				9596DA062A0162C600CBDEAF /* UserModel.swift in Sources */,
 				95BC050029F0E70D00D26C44 /* iOSTemplate.xcdatamodeld in Sources */,
 				9596DA082A01633300CBDEAF /* KANotificationModel.swift in Sources */,
+				95B360D32A0191B400256BD7 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,7 +732,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -736,7 +786,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -754,11 +804,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSTemplate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Authentication;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -768,6 +819,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sndasnsu.iOSTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -786,7 +841,7 @@
 				INFOPLIST_FILE = iOSTemplate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Authentication;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -796,6 +851,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sndasnsu.iOSTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -853,6 +912,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sndasnsu.iOSTemplateUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -871,6 +933,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sndasnsu.iOSTemplateUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

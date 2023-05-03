@@ -42,7 +42,7 @@ class WebServiceManager: NSObject {
         }
         return ["Accept":"application/json","apiKey":"h3rHjcEkc4B3MsUwE27BrQn3w6atfgLg","appId":"1601973955"]
     }
-    }
+}
 
 //***********************************************//
 // MARK: Login Webservices
@@ -62,18 +62,18 @@ extension WebServiceManager {
     func fakeProducts(_ data:[String: Any], block:@escaping CompletionBlock){
         let completeUrl = ServiceConst.BaseUrl + "products"
         print("STD", fakeProducts)
-        callPostRequestWithCompleteUrl(url: completeUrl, andParams: data, withCompletionBlock: block)
+        callGetRequestWithCompleteUrl(url: completeUrl, withCompletionBlock: block)
     }
-
-
-
-func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion block:@escaping CompletionBlock){
-       let completeUrl = ServiceConst.BaseUrl+"user/authentication"
     
-    print(completeUrl,params)
     
-    callUploadImageRequestWithCompleteUrl(url: completeUrl, imageData, "jpg", andParams: params, withCompletionBlock: block)
-   }
+    
+    func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion block:@escaping CompletionBlock){
+        let completeUrl = ServiceConst.BaseUrl+"user/authentication"
+        
+        print(completeUrl,params)
+        
+        callUploadImageRequestWithCompleteUrl(url: completeUrl, imageData, "jpg", andParams: params, withCompletionBlock: block)
+    }
     
     
     
@@ -81,11 +81,11 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
     // MARK: Add New Kid
     //***********************************************//
     func addNewKidWithDetails(_ imageData:Data?,_ params:[String:String], withCompletion block:@escaping CompletionBlock){
-           let completeUrl = ServiceConst.BaseUrl+"kid/add"
+        let completeUrl = ServiceConst.BaseUrl+"kid/add"
         
         print("reqesuted Params:-\(params)....... Request URL:- \(completeUrl),")
         callUploadImageRequestWithCompleteUrl(url: completeUrl, imageData, "jpg", andParams: params, withCompletionBlock: block)
-       }
+    }
     
     
     //***********************************************//
@@ -98,7 +98,7 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: data, withCompletionBlock: block)
     }
     
-   
+    
     
     
     //***********************************************//
@@ -124,11 +124,11 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
     // MARK: Validate Email and Phone
     //***********************************************//
     func validateKidWithDetails(_ params:[String:String], withCompletion block:@escaping CompletionBlock){
-           let completeUrl = ServiceConst.BaseUrl+"kid/check/duplicate"
+        let completeUrl = ServiceConst.BaseUrl+"kid/check/duplicate"
         
         print("reqesuted Params:-\(params)....... Request URL:- \(completeUrl),")
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: params, withCompletionBlock: block)
-       }
+    }
     
     
     
@@ -142,11 +142,11 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
     // MARK: Update  Kid
     //***********************************************//
     func updateKidWithDetails(_ imageData:Data?,_ params:[String:String], withCompletion block:@escaping CompletionBlock){
-           let completeUrl = ServiceConst.BaseUrl+"kid/update"
+        let completeUrl = ServiceConst.BaseUrl+"kid/update"
         
         print("reqesuted Params:-\(params)....... Request URL:- \(completeUrl),")
         callUploadImageRequestWithCompleteUrl(url: completeUrl, imageData, "jpg", andParams: params, withCompletionBlock: block)
-       }
+    }
     
     
     
@@ -160,7 +160,7 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         
         print("Request URL:- \(completeUrl)")
         callGetRequestWithCompleteUrl(url:completeUrl , withCompletionBlock: block)
-       }
+    }
     
     
     
@@ -173,7 +173,7 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         
         print("Request URL:- \(completeUrl)")
         callGetRequestWithCompleteUrl(url:completeUrl , withCompletionBlock: block)
-       }
+    }
     
     
     
@@ -188,9 +188,9 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         let completeUrl = ServiceConst.BaseUrl+"kid/delete"
         print("Request URL:- \(completeUrl)","Request Params:- \(params)")
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: params, withCompletionBlock: block)
-       }
+    }
     
-
+    
     
     
     
@@ -207,12 +207,12 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
     
     
     
-//    func addSingleEventWithDetails(_ data:[String:Any],_ block:@escaping CompletionBlock){
-//        let completeUrl = ServiceConst.BaseUrl+"event/add"
-//
-//        print(completeUrl,data)
-//        callPostRequestWithCompleteUrl(url: completeUrl, andParams: data, withCompletionBlock: block)
-//    }
+    //    func addSingleEventWithDetails(_ data:[String:Any],_ block:@escaping CompletionBlock){
+    //        let completeUrl = ServiceConst.BaseUrl+"event/add"
+    //
+    //        print(completeUrl,data)
+    //        callPostRequestWithCompleteUrl(url: completeUrl, andParams: data, withCompletionBlock: block)
+    //    }
     
     
     
@@ -263,7 +263,7 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
     
     //details
     
-
+    
     
     
     //***********************************************//
@@ -276,7 +276,7 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         callGetRequestWithCompleteUrl(url: completeUrl, withCompletionBlock: block)
     }
     
- 
+    
     
     
     //*****************************************//
@@ -307,7 +307,7 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         let completeUrl = ServiceConst.BaseUrl+"venue/add"
         print(completeUrl,param)
         
-      callUploadImageRequestWithCompleteUrl(url: completeUrl, imageData, "jpg", andParams: param, withCompletionBlock: block)
+        callUploadImageRequestWithCompleteUrl(url: completeUrl, imageData, "jpg", andParams: param, withCompletionBlock: block)
     }
     
     //****************************************//
@@ -317,9 +317,9 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         let completeUrl = ServiceConst.BaseUrl+"venue/update"
         print(completeUrl,param)
         
-      callUploadImageRequestWithCompleteUrl(url: completeUrl, imageData, "jpg", andParams: param, withCompletionBlock: block)
+        callUploadImageRequestWithCompleteUrl(url: completeUrl, imageData, "jpg", andParams: param, withCompletionBlock: block)
     }
-        
+    
     
     //***********************************************//
     // MARK: Get Venue List with details
@@ -456,7 +456,7 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         callGetRequestWithCompleteUrl(url: completeUrl, withCompletionBlock: block)
     }
     
-
+    
     
     //*************************************//
     // MARK: Delete Notification
@@ -479,7 +479,7 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         
         print(completeUrl)
         
-    callPostRequestWithCompleteUrl(url: completeUrl, andParams: data, withCompletionBlock: block)
+        callPostRequestWithCompleteUrl(url: completeUrl, andParams: data, withCompletionBlock: block)
     }
     
     
@@ -498,7 +498,7 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         let completeUrl = ServiceConst.BaseUrl+"post/like-unlike"
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: data, withCompletionBlock: block)
     }
-
+    
     
     
     
@@ -543,52 +543,52 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
     
     
     func bookEventWithDetails(_ parameters:[String:Any],withCompletionBlock block:@escaping CompletionBlock){
-           let completeUrl = ServiceConst.BaseUrl+"payment"
+        let completeUrl = ServiceConst.BaseUrl+"payment"
         
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: parameters, withCompletionBlock: block)
-       }
+    }
     
     
     func getTicketWithDetails(_ ticketKey:String,withCompletionBlock block:@escaping CompletionBlock){
-           let completeUrl = ServiceConst.BaseUrl+"get/ticket/"+ticketKey
+        let completeUrl = ServiceConst.BaseUrl+"get/ticket/"+ticketKey
         callGetRequestWithCompleteUrl(url: completeUrl, withCompletionBlock: block)
-       }
+    }
     
     
     
     
     func getUpdateTicketAcceptRejectWithDetails(_ param:[String:Any],withCompletionBlock block:@escaping CompletionBlock){
-           let completeUrl = ServiceConst.BaseUrl+"ticket/approved"
+        let completeUrl = ServiceConst.BaseUrl+"ticket/approved"
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: param, withCompletionBlock: block)
-       }
+    }
     
     
     func getSavedCardWithDetails(_ userId:String,withCompletionBlock block:@escaping CompletionBlock){
-           let completeUrl = ServiceConst.BaseUrl+"get/saved/card/"+userId
+        let completeUrl = ServiceConst.BaseUrl+"get/saved/card/"+userId
         callGetRequestWithCompleteUrl(url: completeUrl, withCompletionBlock: block)
-       }
+    }
     
     
     func getScannedBarCodeWithDetails(_ data:[String:Any],withCompletionBlock block:@escaping CompletionBlock){
-           let completeUrl = ServiceConst.BaseUrl+"ticket/scan"
+        let completeUrl = ServiceConst.BaseUrl+"ticket/scan"
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: data, withCompletionBlock: block)
-       }
+    }
     
     
     
     func purchaseExperienceUsingApplePayWithDetails(_ parameters:[String:Any],withCompletionBlock block:@escaping CompletionBlock){
-           let completeUrl = ServiceConst.BaseUrl+"apple_payment_api"
+        let completeUrl = ServiceConst.BaseUrl+"apple_payment_api"
         
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: parameters, withCompletionBlock: block)
-       }
+    }
     
     
     func purchaseExperienceUsingSavedCardWithDetails(_ parameters:[String:Any],withCompletionBlock block:@escaping CompletionBlock){
-           let completeUrl = ServiceConst.BaseUrl+"paywithsavedcard"
+        let completeUrl = ServiceConst.BaseUrl+"paywithsavedcard"
         
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: parameters, withCompletionBlock: block)
-       }
-
+    }
+    
     
     
     func getLatLongFromPlaceId(placeId:String,block:@escaping CompletionBlock){
@@ -830,24 +830,24 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
     // MARK: Add Post or Activity In Group
     //***************************************//
     func addNewActivity(_ imageData:Data?,_ params:[String:String], withCompletion block:@escaping CompletionBlock){
-           let completeUrl = ServiceConst.BaseUrl+"post/add"
+        let completeUrl = ServiceConst.BaseUrl+"post/add"
         
         print(completeUrl,params)
         
         callUploadImageRequestWithCompleteUrl(url: completeUrl, imageData, "jpg", andParams: params, withCompletionBlock: block)
-       }
+    }
     
     
     //***************************************//
     // MARK: Update Post or Activity In Group
     //***************************************//
     func updateActivity(_ imageData:Data?,_ params:[String:String], withCompletion block:@escaping CompletionBlock){
-           let completeUrl = ServiceConst.BaseUrl+"post/update"
+        let completeUrl = ServiceConst.BaseUrl+"post/update"
         
         print(completeUrl,params)
         
         callUploadImageRequestWithCompleteUrl(url: completeUrl, imageData, "jpg", andParams: params, withCompletionBlock: block)
-       }
+    }
     
     
     
@@ -865,10 +865,10 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
     // MARK: Get Group Post or Activity List
     //*************************************//
     func getActivityList(_ params:[String:String], withCompletion block:@escaping CompletionBlock){
-           let completeUrl = ServiceConst.BaseUrl+"posts/get"
+        let completeUrl = ServiceConst.BaseUrl+"posts/get"
         print(completeUrl,params)
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: params, withCompletionBlock: block)
-       }
+    }
     
     //****************************************//
     // MARK: Add Comment on Actvity on Post
@@ -930,7 +930,7 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: data, withCompletionBlock: block)
     }
-        
+    
     
     //******************************************//
     // MARK: Get Actvity Details List
@@ -976,7 +976,7 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: data, withCompletionBlock: block)
     }
     
-   
+    
     
     
     //***********************************************//
@@ -989,19 +989,6 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: data, withCompletionBlock: block)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     //***********************************************//
     // MARK: User Interest List
@@ -1022,8 +1009,8 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: data, withCompletionBlock: block)
     }
-
-
+    
+    
     
     //***********************************************//
     // MARK: Varify OTP
@@ -1032,7 +1019,7 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
         let completeUrl = ServiceConst.BaseUrl+"user/verify/code"
         callPostRequestWithCompleteUrl(url: completeUrl, andParams: data, withCompletionBlock: block)
     }
-
+    
     
     
     //***********************************************//
@@ -1044,7 +1031,7 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
     }
     
     
-
+    
     
     func callUploadImageRequestWithCompleteUrl(url:String,_ attachMentData: Data?,_ exten: String, andParams parameters:[String:String],withCompletionBlock block:@escaping CompletionBlock){
         manager.upload(multipartFormData: { multipartFormData in
@@ -1055,83 +1042,72 @@ func loginWithGoogle(_ imageData:Data?,_ params:[String:String], withCompletion 
             for (key, value) in parameters {
                 multipartFormData.append((value.data(using: .utf8))!, withName: key)
             }}, to: url, method: .post, headers: WebServiceManager.headers,
-                encodingCompletion: { encodingResult in
-  switch encodingResult {
-  case .success(let upload, _, _):
-      upload.response {  response in
-       if let data = response.data {
-        do{
-         let dict = try JSON(data: data)
-            if let data = dict.rawValue as? [String : Any] {
-                print(WebServiceManager.headers)
-                block(200,data)
-            }
-        print(dict)
-            
-        }catch{
-            print("erroMsg",response)
-        }
-        }
-        
-      }
-                    case .failure(let encodingError):
-                        block(0,["error":encodingError.localizedDescription])
+                       encodingCompletion: { encodingResult in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                upload.response {  response in
+                    if let data = response.data {
+                        do{
+                            let dict = try JSON(data: data)
+                            if let data = dict.rawValue as? [String : Any] {
+                                print(WebServiceManager.headers)
+                                block(200,data)
+                            }
+                            print(dict)
+                            
+                        }catch{
+                            print("erroMsg",response)
+                        }
                     }
+                    
+                }
+            case .failure(let encodingError):
+                block(0,["error":encodingError.localizedDescription])
+            }
         })
     }
-        
+    
     
     func callUploadImageAndVideoRequestWithCompleteUrl(url:String,_ imgData: Data?,_ videoData: Data?, andParams parameters:[String:String],withCompletionBlock block:@escaping CompletionBlock){
         manager.upload(multipartFormData: { multipartFormData in
             if let imageData = imgData {
                 multipartFormData.append(imageData, withName: "image", fileName: "image.jpg", mimeType: "image/jpg")
             }
-                        
-              if let vData = videoData {
-                 multipartFormData.append(vData, withName: "video", fileName: "video.mp4", mimeType: "video/mp4")
+            
+            if let vData = videoData {
+                multipartFormData.append(vData, withName: "video", fileName: "video.mp4", mimeType: "video/mp4")
                 
-                        }
-                        
-                        
+            }
             
             for (key, value) in parameters {
                 multipartFormData.append((value.data(using: .utf8))!, withName: key)
             }}, to: url, method: .post, headers: WebServiceManager.headers,
-                encodingCompletion: { encodingResult in
-  switch encodingResult {
-  case .success(let upload, _, _):
-      upload.response {  response in
-       if let data = response.data {
-        do{
-         let dict = try JSON(data: data)
-            if let data = dict.rawValue as? [String : Any] {
-                print(WebServiceManager.headers)
-                block(200,data)
-            }
-        print(dict)
-            
-        }catch{
-            print("erroMsg",response)
-        }
-        }
+                       encodingCompletion: { encodingResult in
+            switch encodingResult {
+            case .success(let upload, _, _):
+                upload.response {  response in
+                    if let data = response.data {
+                        do{
+                            let dict = try JSON(data: data)
+                            if let data = dict.rawValue as? [String : Any] {
+                                print(WebServiceManager.headers)
+                                block(200,data)
+                            }
+                            print(dict)
                             
+                        }catch{
+                            print("erroMsg",response)
                         }
-                    case .failure(let encodingError):
-                        block(0,["error":encodingError.localizedDescription])
                     }
+                    
+                }
+            case .failure(let encodingError):
+                block(0,["error":encodingError.localizedDescription])
+            }
         })
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    }
+}
 
 //***********************************************//
 // MARK: Alamofire Calling Methods
@@ -1158,7 +1134,7 @@ extension WebServiceManager {
      *  @param block       CompletionBlock.
      */
     private func callGetRequestWithCompleteUrl(url:String, andData data:[String:Any]? = nil,withCompletionBlock block:@escaping CompletionBlock) {
-       // UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        // UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         
         print("Request Method:- Get"," Requested URL:-\(url)","Requested Params:-\(data)",WebServiceManager.headers)
@@ -1170,17 +1146,17 @@ extension WebServiceManager {
             .subscribe(onNext: {  (r, json) in
                 switch r.statusCode {
                 case 200 :
-                  //
+                    //
                     print("RequestUrl:\(url)\nRequestParams:\(data)\nResponseCode:\(r.statusCode)\nResponseData:\(json))",WebServiceManager.headers)
                     block(r.statusCode,json as! [String : Any])
                     
                 case 201...502:
-                  //
+                    //
                     print("RequestUrl:\(url)\nRequestParams:\("")\nResponseCode:\(r.statusCode)\nResponseData:\(json))",WebServiceManager.headers)
                     block(r.statusCode,json as! [String : Any])
                     break
                 default :
-                   //
+                    //
                     let statusCode = r.statusCode
                     print("RequestUrl:\(url)\nRequestParams:\("")\nResponseCode:\(r.statusCode)\nError:\(0)")
                     block(statusCode,["error":"Faliure"])
@@ -1189,7 +1165,7 @@ extension WebServiceManager {
             }, onError: { (error) in
                 let mode  = error.localizedDescription
                 print(mode)
-               //
+                //
                 print("RequestUrl:\(url)\nRequestParams:\("")\nResponseCode:\(0)\nError:\(error)")
                 block(0,["error":error.localizedDescription])
             })
@@ -1207,21 +1183,21 @@ extension WebServiceManager {
         
         print("Requested Method:- Post"," Requested URL:-\(url)","Requested Params:-\(params)")
         
-       // UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        // UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         
         manager.rx.responseJSON(.post, url,parameters :params,encoding : URLEncoding.default,headers : WebServiceManager.headers)
-            
+        
             .debounce(.nanoseconds(1), scheduler: MainScheduler.instance)
             .subscribe(onNext: {  (r, json) in
                 switch r.statusCode {
                 case 200 :
-                //
+                    //
                     print("RequestUrl:\(url)\nRequestParams:\(params)\nResponseCode:\(r.statusCode)\nResponseData:\(json))")
                     block(r.statusCode,json as! [String : Any])
                     
                 case 201...502:
-                  //
+                    //
                     print("RequestUrl:\(url)\nRequestParams:\(params)\nResponseCode:\(r.statusCode)\nResponseData:\(json))")
                     block(r.statusCode,json as! [String : Any])
                     break
@@ -1236,7 +1212,7 @@ extension WebServiceManager {
                 let errorCode = error.localizedDescription
                 
                 print(errorCode)
-               //
+                //
                 print("RequestUrl:\(url)\nRequestParams:\("")\nResponseCode:\(0)\nError:\(error)")
                 block(0,["error":error.localizedDescription])
             })
@@ -1248,14 +1224,14 @@ extension WebServiceManager {
     // MARK: Private Service to access Scaned card data 9
     //***********************************************//
     private func cardCallPostRequestWithCompleteUrl(url:String, andData data:[String:Any],withCompletionBlock block:@escaping CompletionBlock) {
-       // UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        // UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         manager.rx.responseJSON(.post, url,parameters :data,encoding : JSONEncoding.default,headers : WebServiceManager.headers)
             .debounce(.milliseconds(0), scheduler: MainScheduler.instance)
             .subscribe(onNext: {  (r, json) in
                 switch r.statusCode {
                 case 200 :
-                  //
+                    //
                     print("RequestUrl:\(url)\nRequestParams:\(data)\nResponseCode:\(r.statusCode)\nResponseData:\(json))",WebServiceManager.headers)
                     block(r.statusCode,json as! [String : Any])
                     
@@ -1265,7 +1241,7 @@ extension WebServiceManager {
                     block(r.statusCode,json as! [String : Any])
                     break
                 default :
-                   //
+                    //
                     let statusCode = r.statusCode
                     print("RequestUrl:\(url)\nRequestParams:\(data)\nResponseCode:\(r.statusCode)\nError:\(0)")
                     block(statusCode,["error":"Faliure"])
@@ -1275,7 +1251,7 @@ extension WebServiceManager {
                 let errorCode = error.localizedDescription
                 
                 print(errorCode)
-              //
+                //
                 print("RequestUrl:\(url)\nRequestParams:\("")\nResponseCode:\(0)\nError:\(error)")
                 block(0,["error":error.localizedDescription])
             })

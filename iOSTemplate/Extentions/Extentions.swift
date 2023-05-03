@@ -1363,3 +1363,35 @@ extension UIView {
     }
 
 }
+
+extension JSONDecoder {
+    
+    func convertToDictionary<T: Encodable, U>(_ model: T) -> U? {
+        
+        do {
+            let data = try JSONEncoder().encode(model)
+            let dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? U
+            return dictionary
+        } catch {
+            debugPrint(error.localizedDescription)
+            return nil
+        }
+    }
+    
+    
+    func convertToData<T: Encodable>(_ model: T) -> Data? {
+        let encoder = JSONEncoder()
+        return try? encoder.encode(model)
+    }
+}
+
+extension JSONDecoder {
+    func convertDataToModel<T: Decodable>(_ data: Data) -> T? {
+        do {
+            return try JSONDecoder().decode(T.self, from: data)
+        } catch {
+            debugPrint(error)
+            return nil
+        }
+    }
+}
